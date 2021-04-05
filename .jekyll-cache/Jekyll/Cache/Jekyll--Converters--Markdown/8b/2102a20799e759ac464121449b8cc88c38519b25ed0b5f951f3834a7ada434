@@ -1,0 +1,18 @@
+I"½<h1>series</h1>
+
+<ul>
+  
+    <li>
+        <h2><a href="/series/mern-url-shortener.html">MERN URL Shortener</a></h2>
+        <p><p>We will be using React, Mongo, Express and Node to make a URL shortener</p>
+</p>
+    </li>
+  
+    <li>
+        <h2><a href="/series/monorepo-web-and-native.html">Monorepo React + React Native</a></h2>
+        <p><p>We will be using React, Mongo, Express and Node to make a URL shortener</p>
+</p>
+    </li>
+  
+</ul>
+:ET
