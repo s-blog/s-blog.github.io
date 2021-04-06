@@ -1,7 +1,4 @@
 ---
 title: "?"
 ---
-
-# About page
-
-This page tells you a little bit about me.
+To learn more about me, visit <a href="http://serhanozgul.com" target="_blank">serhanozgul.com</a>

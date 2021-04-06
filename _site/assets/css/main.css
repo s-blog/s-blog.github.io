@@ -1,10 +1,36 @@
-body { background: #ffffff; color: #000000; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+body { background: #040204; color: #a8f0de; font-family: "Menlo", "monospace", "Inconsolata", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-size: 0.9em; margin: 0; padding: 2em; min-width: 635px; box-sizing: border-box; }
 
-.current { color: green; }
+.content { max-width: calc(800px - 4em); }
 
-.highlight pre { background-color: #272822; }
+.title { color: #dffffF; text-decoration: underline; }
 
-.highlight .hll { background-color: #272822; }
+.current { text-decoration: underline; }
+
+.faded-highlight { color: #558173; }
+
+.highlight { font-size: 1.25em; margin: 0; }
+
+.no-underline { text-decoration: none; }
+
+.aboutLink { position: fixed; bottom: 2em; right: 2em; }
+
+contact { color: #dffffF; }
+
+p { font-size: 1em; }
+
+a { text-decoration: none; color: #dffffF; }
+
+a:visited { color: #daffff; }
+
+nav a { text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+.seriePreview { position: relative; }
+
+.highlight pre { background-color: #151517; padding: 1em; box-sizing: border-box; overflow: auto; width: 100%; }
+
+.highlight .hll { background-color: #151517; padding: 1em; }
 
 .highlight .lineno { color: #807b70; }
 

@@ -1,0 +1,25 @@
+I"ó<p>The goal of this journal is to highlight and improve my process. Each series will explore how to integrate some popular libraries in boilerplate. Enjoy these fun learning exercises.</p>
+
+<p>Good luck building!
+<br />
+<br /></p>
+
+<ul>
+  
+    <li>
+        <a href="/series/mern-url-shortener.html">MERN URL Shortener</a>
+        <div class="seriePreview"><p>We will be using React, Mongo, Express and Node to make a URL shortener</p>
+</div>
+        <br />
+    </li>
+  
+    <li>
+        <a href="/series/monorepo-web-and-native.html">Monorepo React + React Native</a>
+        <div class="seriePreview"><p>Web and native platform boilerplate code with authentication using React + ReactNative &amp; Typescript</p>
+</div>
+        <br />
+    </li>
+  
+</ul>
+
+:ET

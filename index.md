@@ -1,18 +1,19 @@
 ---
 title: "bloğ"
 ---
+The goal of this journal is to highlight and improve my process. Each series will explore how to integrate some popular libraries in boilerplate. Enjoy these fun learning exercises.
 
-## You're ready to go!
+Good luck building!
+<br/>
+<br/>
 
-Start developing your Jekyll website.
+<ul>
+  {% for serie in site.series %}
+    <li>
+        <a href="{{ serie.url }}">{{ serie.title }}</a>
+        <div class="seriePreview">{{ serie.content | markdownify }}</div>
+        <br/>
+    </li>
+  {% endfor %}
+</ul>
 
-<h1>{{ "Hello World!" | downcase }}</h1>
-
-{% for tag in site.tags reversed%}
-  <h3>{{ tag[0] }}</h3>
-  <ul>
-    {% for post in tag[1] %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a>{{ post.excerpt }}</li>
-    {% endfor %}
-  </ul>
-{% endfor %}

@@ -1,13 +1,13 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
+> <text class="title">{{ page.title }}</text>
 
 {{ content }}
 
 <ul>
-  {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
-  {% for post in filtered_posts %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% assign filtered_posts = site.posts | where: 'serie', page.short-name %}
+  {% for post in filtered_posts reversed%}
+    <li><a href="{{ post.url }}">{{ post.display-title }}</a></li>
   {% endfor %}
 </ul>

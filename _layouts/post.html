@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<p>{{ page.date | date_to_string }}</p>
+{% assign filtered_series = site.series | where: 'short-name', page.serie %}
+> {% for serie in filtered_series %}<a href="{{ serie.url }}">{{ serie.title }}</a>{% endfor %} > <text class="title">{{ page.display-title }}</text>
+<p class="faded-highlight">{{ page.date | date_to_string }}</p>
 
 {{ content }}

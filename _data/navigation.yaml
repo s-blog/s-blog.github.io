@@ -1,6 +1,4 @@
-- name: Home
+- name: Bloğ
   link: /
-- name: About
+- name: "?"
   link: /about.html
-- name: Series
-  link: /series.html

@@ -1,13 +1,95 @@
-$backgroundColor: #ffffff;
-$bodyColor: #000000;
-$bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$backgroundColor: #040204;
+
+$fontColor: #a8f0de;
+$fontHighlight: #cef9ff;
+$fontColorDarker: rgb(85, 129, 115);
+
+$linkColor:  #dffffF;
+$linkColorVisited: #daffff;
+
+$greenColor: #20fc4c;
+$blueColor: #3e6dec;
+$redColor: rgb(238, 44, 44);
+$brightRedColor: #ffacac;
+$pinkColor: #fc00fc;
+$purpleColor: #a44dc9;
+
+$contact-red: rgb(255, 204, 208);
+$contact-color: #dffffF;
+
+$titleColor: #00ffea;
+
+
+$bodyFont: "Menlo","monospace","Inconsolata",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 
 body {
   background: $backgroundColor;
-  color: $bodyColor;
+  color: $fontColor;
   font-family: $bodyFont;
+  font-size: 0.9em;
+  margin: 0;
+  padding: 2em;
+  min-width: 635px;
+  box-sizing: border-box;
+}
+
+.content {
+  max-width: calc(800px - 4em);
+}
+
+.title {
+  color: $linkColor;
+  text-decoration: underline;
 }
 
 .current {
-  color: green;
+  text-decoration: underline;
+}
+
+.faded-highlight {
+  color: $fontColorDarker;
+}
+
+.highlight {
+  font-size: 1.25em;
+  margin: 0;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.aboutLink {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+}
+
+contact {
+  color: $contact-color;
+}
+
+p {
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: $linkColor;
+}
+
+a:visited {
+  color: $linkColorVisited;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.seriePreview {
+  position: relative;
 }

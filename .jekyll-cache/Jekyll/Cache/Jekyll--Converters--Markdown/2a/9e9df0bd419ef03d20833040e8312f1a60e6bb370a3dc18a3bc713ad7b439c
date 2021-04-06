@@ -1,0 +1,7 @@
+I"�<p>So the first thing we’ll do, quite counterintuitively, is to deploy our application. Well, “Why deploy an empty application which doesn’t exist yet?“ you might ask. Why the heck not?</p>
+<!--more-->
+<ul>
+    <li>It allows us to setup our continuous integration pipeline from the start.</li>
+    <li>Also makes our application accessible to others for early feedback.</li>
+</ul>
+:ET

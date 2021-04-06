@@ -1,0 +1,49 @@
+I"/<p>So the first thing we’ll do, quite counterintuitively, is to deploy our application. Well, “Why deploy an empty application which doesn’t exist yet?“ you might ask. Why the heck not?</p>
+<!--more-->
+<ul>
+    <li>It allows us to setup our continuous integration pipeline from the start.</li>
+    <li>Also makes our application accessible to others for early feedback.</li>
+</ul>
+
+<p>We will need three things to get started.</p>
+<p>A source code repository hosting service. → Bitbucket
+<br />A URL endpoint from any CDN provider. → AWS S3
+<br />And the CI/CD solution of your choosing. → CircleCI
+<br />
+<br /></p>
+
+<p><u class="faded-highlight">Repo setup</u><br /><br />
+Let’s create a repository, my glorious project shall be called “monorepo-client”. Boring and nerdy, yet hits the spot. We can spice it up later when the project becomes a hit. Renaming repos is always fun.</p>
+
+<p>Now that we have our remote repo setup, let’s clone it to our local, we will later connect this repo to CircleCI for CI/CD.</p>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>git clone git@bitbucket.org:monorepo-template/monorepo-client-root.git</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span><span class="nb">cd </span>monorepo-client-root</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>npm init</code></pre></figure>
+
+<p>After we navigate to our cloned folder and run “npm init” we will be guided in creating a minimal package.json file that will look like this.</p>
+<p>  </p>
+
+<p><u class="faded-highlight">
+\<root>/package.json
+&lt;/u&gt;</root></u></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre>    <span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+        <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">end</span>
+    <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+    <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">log</span><span class="dl">'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+:ET

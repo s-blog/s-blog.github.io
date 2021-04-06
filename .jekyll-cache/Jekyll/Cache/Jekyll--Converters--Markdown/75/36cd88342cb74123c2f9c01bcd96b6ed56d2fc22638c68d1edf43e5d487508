@@ -1,0 +1,60 @@
+I"�<p>So the first thing we’ll do, quite counterintuitively, is to deploy our application. Well, “Why deploy an empty application which doesn’t exist yet?“ you might ask. Why the heck not?</p>
+<!--more-->
+<ul>
+    <li>It allows us to setup our continuous integration pipeline from the start.</li>
+    <li>Also makes our application accessible to others for early feedback.</li>
+</ul>
+
+<p>We will need three things to get started.</p>
+<p>A source code repository hosting service. → Bitbucket
+<br />A URL endpoint from any CDN provider. → AWS S3
+<br />And the CI/CD solution of your choosing. → CircleCI
+<br />
+<br /></p>
+
+<p><u class="faded-highlight">Repo setup</u><br /><br />
+Let’s create a repository, my glorious project shall be called “monorepo-client”. Boring and nerdy, yet hits the spot. We can spice it up later when the project becomes a hit. Renaming repos is always fun.</p>
+
+<p>Now that we have our remote repo setup, let’s clone it to our local, we will later connect this repo to CircleCI for CI/CD.</p>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>git clone git@bitbucket.org:monorepo-template/monorepo-client-root.git</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span><span class="nb">cd </span>monorepo-client-root</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>npm init</code></pre></figure>
+
+<p>After we navigate to our cloned folder and run “npm init” we will be guided in creating a minimal package.json file that will look like this.</p>
+<p><u class="faded-highlight no-underline">&lt;root&gt;/package.json</u></p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="w">    </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monorepo-client-root"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.js"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"echo </span><span class="se">\"</span><span class="s2">Error: no test specified</span><span class="se">\"</span><span class="s2"> &amp;&amp; exit 1"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"repository"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"git"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"git+ssh://git@bitbucket.org/monorepo-template/monorepo-client-root.git"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ISC"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"homepage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://bitbucket.org/monorepo-template/monorepo-client-root#readme"</span><span class="w">
+    </span><span class="p">}</span></code></pre></figure>
+
+<p><u class="faded-highlight">React app setup with Typescript Babel and Eslint</u><br /><br /></p>
+
+<p>We also create a directory for our React application, we will call this folder “web-client”. After you navigate to this folder, once again run “npm init”, this one we will configure with the scripts and dependencies for our web application.</p>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir </span>web-client <span class="o">&amp;&amp;</span> <span class="nb">cd </span>web-client <span class="o">&amp;&amp;</span> npm init</code></pre></figure>
+
+<p>The next steps will be following the amazing tutorial by Carl Rippon, <a href="https://www.carlrippon.com/creating-react-app-with-typescript-eslint-with-webpack5/" target="_blank">“Creating a React app with TypeScript and ESLint with Webpack 5”</a>. The explanations he provides are so educational, I suggest you take the time to read it in full. If you are already comfortable with these concepts, the rest of our configuration till the deployment section are the steps highlighted in his post.</p>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>npm i react react-dom</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span><span class="nb">cd </span>monorepo-client-root</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span><span class="nb">cd </span>monorepo-client-root</code></pre></figure>
+
+:ET
