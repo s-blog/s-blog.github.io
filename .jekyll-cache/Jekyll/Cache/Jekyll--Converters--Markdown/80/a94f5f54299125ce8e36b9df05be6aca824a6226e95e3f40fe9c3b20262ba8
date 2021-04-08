@@ -1,52 +1,4 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>serhanozgul - Monorepo R+RN, Ch 2</title>
-    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Monorepo R+RN, Ch 2 | serhanozgul</title>
-<meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Monorepo R+RN, Ch 2" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="So the first thing we’ll do, quite counterintuitively, is to deploy our application. Well, “Why deploy an empty application which doesn’t exist yet?“ you might ask. Why the heck not? It allows us to setup our continuous integration pipeline from the start. Also makes our application accessible to others for early feedback." />
-<meta property="og:description" content="So the first thing we’ll do, quite counterintuitively, is to deploy our application. Well, “Why deploy an empty application which doesn’t exist yet?“ you might ask. Why the heck not? It allows us to setup our continuous integration pipeline from the start. Also makes our application accessible to others for early feedback." />
-<link rel="canonical" href="http://0.0.0.0:4000/2021/04/02/monorepo-web-and-native-ch-2-project-setup.html" />
-<meta property="og:url" content="http://0.0.0.0:4000/2021/04/02/monorepo-web-and-native-ch-2-project-setup.html" />
-<meta property="og:site_name" content="serhanozgul" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-04-02T15:00:00+02:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Monorepo R+RN, Ch 2" />
-<script type="application/ld+json">
-{"url":"http://0.0.0.0:4000/2021/04/02/monorepo-web-and-native-ch-2-project-setup.html","headline":"Monorepo R+RN, Ch 2","dateModified":"2021-04-02T15:00:00+02:00","datePublished":"2021-04-02T15:00:00+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2021/04/02/monorepo-web-and-native-ch-2-project-setup.html"},"@type":"BlogPosting","description":"So the first thing we’ll do, quite counterintuitively, is to deploy our application. Well, “Why deploy an empty application which doesn’t exist yet?“ you might ask. Why the heck not? It allows us to setup our continuous integration pipeline from the start. Also makes our application accessible to others for early feedback.","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-
-  </head>
-  <body>
-    <div class="content">
-      
-  
-    <a href="/" 
-      class="
-      
-      "
-    >Bloğ</a>
-  
-    <a href="/about.html" 
-      class="
-      
-       aboutLink"
-    >?</a>
-  
-
-      
-> <a href="/series/monorepo-web-and-native.html">Monorepo React + React Native</a> > <text class="title">Ch 2 - Project Setup</text>
-<p class="faded-highlight">02 Apr 2021</p>
-
-<p>So the first thing we’ll do, quite counterintuitively, is to deploy our application. Well, “Why deploy an empty application which doesn’t exist yet?“ you might ask. Why the heck not?</p>
+I"1�<p>So the first thing we’ll do, quite counterintuitively, is to deploy our application. Well, “Why deploy an empty application which doesn’t exist yet?“ you might ask. Why the heck not?</p>
 <!--more-->
 <ul>
     <li>It allows us to setup our continuous integration pipeline from the start.</li>
@@ -227,23 +179,23 @@ Let’s create a repository, my glorious project shall be called “monorepo-cli
 <u class="faded-highlight">Webpack setup</u><br /></p>
 <p>Adding Webpack</p>
 
-<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>npm i <span class="nt">--save-dev</span> webpack webpack-cli @types/webpack</code></pre></figure>
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">   $</span><span class="w"> </span>npm i <span class="nt">--save-dev</span> webpack webpack-cli @types/webpack</code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>npm <span class="nb">install</span> <span class="nt">--save-dev</span> webpack-dev-server @types/webpack-dev-server</code></pre></figure>
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">   $</span><span class="w"> </span>npm <span class="nb">install</span> <span class="nt">--save-dev</span> webpack-dev-server @types/webpack-dev-server</code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>npm <span class="nb">install</span> <span class="nt">--save-dev</span> babel-loader</code></pre></figure>
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">   $</span><span class="w"> </span>npm <span class="nb">install</span> <span class="nt">--save-dev</span> babel-loader</code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>npm <span class="nb">install</span> <span class="nt">--save-dev</span> html-webpack-plugin</code></pre></figure>
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">   $</span><span class="w"> </span>npm <span class="nb">install</span> <span class="nt">--save-dev</span> html-webpack-plugin</code></pre></figure>
 
 <p>To be able to use .ts extension with webpack configuration files, install ts-node</p>
 
-<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>npm <span class="nb">install</span> <span class="nt">--save-dev</span> ts-node</code></pre></figure>
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">   $</span><span class="w"> </span>npm <span class="nb">install</span> <span class="nt">--save-dev</span> ts-node</code></pre></figure>
 
 <p>Let’s also add typechecking and linting capabilities to webpack.</p>
 
-<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>npm <span class="nb">install</span> <span class="nt">--save-dev</span> fork-ts-checker-webpack-plugin @types/fork-ts-checker-webpack-plugin</code></pre></figure>
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">    $</span><span class="w"> </span>npm <span class="nb">install</span> <span class="nt">--save-dev</span> fork-ts-checker-webpack-plugin @types/fork-ts-checker-webpack-plugin</code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>npm <span class="nb">install</span> <span class="nt">--save-dev</span> eslint-webpack-plugin</code></pre></figure>
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">    $</span><span class="w"> </span>npm <span class="nb">install</span> <span class="nt">--save-dev</span> eslint-webpack-plugin</code></pre></figure>
 
 <p>Now configure webpack.dev.config.ts for development environment</p>
 <p><u class="faded-highlight no-underline">&lt;root&gt;/web-client/webpack.dev.config.ts</u></p>
@@ -376,7 +328,4 @@ Let’s create a repository, my glorious project shall be called “monorepo-cli
   </span><span class="p">}</span><span class="err">,</span></code></pre></figure>
 
 <p>Now that we configured our template app, we are ready to deploy.</p>
-
-    </div>
-  </body>
-</html>
+:ET

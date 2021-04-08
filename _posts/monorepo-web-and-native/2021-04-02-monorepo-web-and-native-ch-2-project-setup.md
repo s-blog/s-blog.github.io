@@ -41,22 +41,22 @@ $ npm init
 <u class="faded-highlight no-underline">&lt;root>/package.json</u>
 
 {% highlight json %}
-    {
-        "name": "monorepo-client-root",
-        "version": "1.0.0",
-        "description": "",
-        "main": "index.js",
-        "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-        },
-        "repository": {
-        "type": "git",
-        "url": "git+ssh://git@bitbucket.org/monorepo-template/monorepo-client-root.git"
-        },
-        "author": "",
-        "license": "ISC",
-        "homepage": "https://bitbucket.org/monorepo-template/monorepo-client-root#readme"
-    }
+{
+    "name": "monorepo-client-root",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/monorepo-template/monorepo-client-root.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "homepage": "https://bitbucket.org/monorepo-template/monorepo-client-root#readme"
+}
 {% endhighlight %}
 <br/>
 <u class="faded-highlight">React app setup with Typescript Babel and Eslint</u><br/>
@@ -91,8 +91,8 @@ $ npx tsc --init
 <p>Edit the tsconfig.json to include the following.</p>
 
 <u class="faded-highlight no-underline">&lt;root>/web-client/tsconfig.json</u>
-{% highlight json linenos%}
-   "compilerOptions": {
+{% highlight json %}
+"compilerOptions": {
    "target": "es5",
    "module": "commonjs",                
    "lib": ["DOM","DOM.Iterable","ESNext"],
@@ -112,7 +112,7 @@ $ npx tsc --init
 <p>Create a src folder within “web-client” and add our entry point there with index.html.</p>
 
 <u class="faded-highlight no-underline">&lt;root>/web-client/src/index.html</u>
-{% highlight html linenos%}
+{% highlight html %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -128,7 +128,7 @@ $ npx tsc --init
 <p>Create index.tsx in the same folder with the following content.</p>
 
 <u class="faded-highlight no-underline">&lt;root>/web-client/src/index.tsx</u>
-{% highlight react linenos%}
+{% highlight react %}
 import React from "react";
 import ReactDOM from "react-dom";
 ‍
@@ -153,7 +153,7 @@ $ npm i --save-dev @babel/core @babel/preset-env @babel/preset-react @babel/pres
 <p>Create .babelrc to configure Babel.</p>
 
 <u class="faded-highlight no-underline">&lt;root>/web-client/.babelrc</u>
-{% highlight json linenos%}
+{% highlight json %}
 {
    "presets": [
      "@babel/preset-env",
@@ -180,7 +180,7 @@ $ npm i --save-dev eslint eslint-plugin-react eslint-plugin-react-hooks @typescr
 <p>Create .eslintrc.json in the web-client directory.</p>
 
 <u class="faded-highlight no-underline">&lt;root>/web-client/.eslintrc.json</u>
-{% highlight json linenos%}
+{% highlight json %}
 {
    "parser": "@typescript-eslint/parser",
    "parserOptions": {
@@ -209,44 +209,43 @@ $ npm i --save-dev eslint eslint-plugin-react eslint-plugin-react-hooks @typescr
  }
 {% endhighlight %}
 
-
 <br/>
 <u class="faded-highlight">Webpack setup</u><br/>
 <p>Adding Webpack</p>
 
 {% highlight console %}
-   $ npm i --save-dev webpack webpack-cli @types/webpack
+$ npm i --save-dev webpack webpack-cli @types/webpack
 {% endhighlight %}
 
 {% highlight console %}
-   $ npm install --save-dev webpack-dev-server @types/webpack-dev-server
+$ npm install --save-dev webpack-dev-server @types/webpack-dev-server
 {% endhighlight %}
 
 {% highlight console %}
-   $ npm install --save-dev babel-loader
+$ npm install --save-dev babel-loader
 {% endhighlight %}
 
 {% highlight console %}
-   $ npm install --save-dev html-webpack-plugin
+$ npm install --save-dev html-webpack-plugin
 {% endhighlight %}
 
 
 <p>To be able to use .ts extension with webpack configuration files, install ts-node</p>
 
 {% highlight console %}
-   $ npm install --save-dev ts-node
+$ npm install --save-dev ts-node
 {% endhighlight %}
 Let’s also add typechecking and linting capabilities to webpack.
 {% highlight console %}
-    $ npm install --save-dev fork-ts-checker-webpack-plugin @types/fork-ts-checker-webpack-plugin
+$ npm install --save-dev fork-ts-checker-webpack-plugin @types/fork-ts-checker-webpack-plugin
 {% endhighlight %}
 {% highlight console %}
-    $ npm install --save-dev eslint-webpack-plugin
+$ npm install --save-dev eslint-webpack-plugin
 {% endhighlight %}
 
 <p>Now configure webpack.dev.config.ts for development environment</p>
 <u class="faded-highlight no-underline">&lt;root>/web-client/webpack.dev.config.ts</u>
-{% highlight typescript linenos%}
+{% highlight typescript %}
 import path from "path";
 import webpack from "webpack";
 import * as webpackDevServer from 'webpack-dev-server';
@@ -308,7 +307,7 @@ export default config;
 
 <p>Configuring for production with slight differences.</p>
 <u class="faded-highlight no-underline">&lt;root>/web-client/webpack.prod.config.ts</u>
-{% highlight typescript linenos%}
+{% highlight typescript %}
 import path from "path";
 import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
@@ -369,7 +368,7 @@ export default config;
 
 <p>Add the below scripts to your package.json</p>
 <u class="faded-highlight no-underline">&lt;root>/web-client/package.json</u>
-{% highlight json linenos%}
+{% highlight json %}
     ...
   "scripts": {
     "start": "webpack serve --config webpack.dev.config.ts",
